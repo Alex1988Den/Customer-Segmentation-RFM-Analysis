@@ -1,85 +1,165 @@
-# Сегментация клиентов с использованием RFM-анализа
-
-Этот проект включает сегментацию клиентов на основе их покупательского поведения с использованием RFM-анализа (Recency, Frequency, Monetary). Цель — классифицировать клиентов в различные сегменты, чтобы разработать соответствующие маркетинговые стратегии.
-Обзор проекта
-
-Проект использует исторические данные о транзакциях с электронной коммерческой платформы. Он включает в себя предобработку данных, выполнение разведывательного анализа данных (EDA) и кластеризацию клиентов на основе RFM-показателей. В конце мы обучаем классификационные модели для предсказания сегмента клиентов.
-Основные цели:
-
-    Предобработка данных: Обработка пропусков, выбросов и дубликатов в данных.
-
-    Разведывательный анализ данных (EDA): Визуализация и анализ поведения клиентов, включая сегментацию по странам, частоте покупок и сезонным трендам.
-
-    RFM-анализ: Расчёт показателей Recency (давность последней покупки), Frequency (частота покупок) и Monetary (денежная ценность для каждого клиента).
-
-    Кластеризация: Использование K-Means, Gaussian Mixture и Agglomerative Clustering для сегментации клиентов на основе их RFM-оценок.
-
-    Моделирование: Обучение классификационных моделей, таких как Random Forest и Gradient Boosting, для предсказания сегментов клиентов.
-
-    Оценка: Оценка моделей с использованием метрики точности (accuracy) и других показателей.
-
-Основные этапы
-1. Предобработка данных
-
-    Очистка данных от пропусков и выбросов.
-
-    Преобразование данных в RFM-признаки (Recency, Frequency, Monetary).
-
-2. Разведывательный анализ данных (EDA)
-
-    Визуализация поведения клиентов по странам, частоте покупок и сезонным трендам.
-
-3. RFM-анализ
-
-    Расчёт показателей Recency, Frequency и Monetary для каждого клиента.
-
-4. Кластеризация
-
-    Использование методов без учителя (K-Means, Gaussian Mixture, Agglomerative Clustering) для сегментации клиентов.
-
-5. Классификационные модели
-
-    Обучение моделей Random Forest и Gradient Boosting для предсказания сегментов клиентов.
-
-6. Оценка
-
-    Использование GridSearchCV для подбора гиперпараметров и оценки производительности модели с использованием точности (accuracy).
-
-Используемые модели
-
-    Random Forest Classifier
-
-    Gradient Boosting Classifier
-
-Результаты
-
-    Модели достигли высокой точности классификации (~98%) при предсказании сегментов клиентов.
-
-    Модели сегментации успешно выявили значимые кластеры клиентов, которые могут быть использованы для целевого маркетинга.
-
-Используемые технологии
-
-    Python
-
-    Pandas
-
-    Scikit-learn
-
-    Plotly (для визуализации данных)
-
-    Seaborn
-
-    Matplotlib
-
-Установка
-1. Клонируйте репозиторий:
-
-git clone https://github.com/alex1988den/DS-Project-6-Marketing-Segmentation.git
-
-2. Установите необходимые зависимости:
-
+# 📊 Customer Segmentation Using RFM Analysis
+ 
+## 📌 Project Overview
+ 
+This project focuses on customer segmentation based on purchasing behavior using the RFM (Recency, Frequency, Monetary) framework.
+ 
+The primary objective is to classify customers into meaningful segments and support data-driven marketing strategies through customer analytics, clustering, and machine learning techniques.
+ 
+The project uses historical e-commerce transaction data and combines data preprocessing, exploratory data analysis (EDA), RFM feature engineering, clustering, and classification models.
+ 
+---
+ 
+## 🎯 Project Objectives
+ 
+- Data preprocessing and cleaning
+- Exploratory Data Analysis (EDA)
+- RFM feature generation
+- Customer segmentation and clustering
+- Customer classification using machine learning
+- Marketing strategy optimization
+- Model evaluation and performance comparison
+ 
+---
+ 
+## 🔍 Project Workflow
+ 
+### 1. Data Preprocessing
+ 
+- Handling missing values
+- Removing duplicates
+- Detecting and treating outliers
+- Preparing data for analysis
+ 
+### 2. Exploratory Data Analysis (EDA)
+ 
+- Customer behavior analysis
+- Country-based segmentation
+- Purchase frequency analysis
+- Seasonal trend analysis
+- Data visualization
+ 
+### 3. RFM Analysis
+ 
+Calculation of:
+ 
+- **Recency** – time since the last purchase
+- **Frequency** – number of purchases
+- **Monetary** – total spending value
+ 
+These metrics are used to build customer profiles and identify behavioral patterns.
+ 
+### 4. Customer Segmentation
+ 
+Unsupervised learning techniques were applied to segment customers using their RFM scores.
+ 
+Algorithms used:
+ 
+- K-Means Clustering
+- Gaussian Mixture Models
+- Agglomerative Clustering
+ 
+### 5. Machine Learning Models
+ 
+Classification models were trained to predict customer segments.
+ 
+Models used:
+ 
+- Random Forest Classifier
+- Gradient Boosting Classifier
+ 
+### 6. Model Evaluation
+ 
+Hyperparameter optimization was performed using:
+ 
+- GridSearchCV
+ 
+Evaluation metrics included:
+ 
+- Accuracy
+- Classification Performance Metrics
+ 
+---
+ 
+## 📊 Results
+ 
+### Customer Segmentation
+ 
+The clustering models successfully identified meaningful customer groups that can be used for targeted marketing and customer retention strategies.
+ 
+### Model Performance
+ 
+The classification models achieved approximately:
+ 
+**✅ 98% Accuracy**
+ 
+for customer segment prediction.
+ 
+---
+ 
+## 💼 Business Value
+ 
+The generated customer segments can be used to:
+ 
+- Improve marketing efficiency
+- Identify loyal customers
+- Detect high-value customers
+- Reduce customer churn
+- Personalize promotional campaigns
+- Increase customer lifetime value
+ 
+---
+ 
+## 🛠 Technologies
+ 
+- Python
+- Pandas
+- NumPy
+- Scikit-Learn
+- Plotly
+- Matplotlib
+- Seaborn
+- Jupyter Notebook
+ 
+---
+ 
+## 🚀 Installation
+ 
+Clone the repository:
+ 
+```bash
+git clone https://github.com/Alex1988Den/Customer-Segmentation-RFM-Analysis.git
+cd Customer-Segmentation-RFM-Analysis
+```
+ 
+Install dependencies:
+ 
+```bash
 pip install -r requirements.txt
-
-3. Запустите ноутбук:
-
-Откройте файл Jupyter Notebook и выполните все ячейки для выполнения проекта.
+```
+ 
+Launch Jupyter Notebook:
+ 
+```bash
+jupyter notebook
+```
+ 
+Open:
+ 
+```text
+Customer_Segmentation_RFM_Analysis.ipynb
+```
+ 
+and run all cells.
+ 
+---
+ 
+## 👨‍💻 Author
+ 
+Developed by **Aleksandr Denissov**
+ 
+📧 Email: aleksandr.denissov@brave.ee
+ 
+---
+ 
+⭐ If you find this project useful, feel free to leave a star on GitHub.
